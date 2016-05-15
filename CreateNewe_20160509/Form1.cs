@@ -16,5 +16,32 @@ namespace CreateNewe_20160509
         {
             InitializeComponent();
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ReturnDateTimePicker2_ValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (ReturnDateTimePicker2.MinDate > DepartureDateTimePicker1.MinDate)
+                {
+                    MessageBox.Show("Selected date is OK!!!");
+                }
+                else
+                    MessageBox.Show("Please select a valid date that is after the Departure!");
+            }
+            catch
+            {
+                //
+            }
+        }
     }
 }
